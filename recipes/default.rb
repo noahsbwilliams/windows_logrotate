@@ -16,6 +16,7 @@ if platform?('windows')
   end
 
   windows_package 'logrotateSetup.exe' do
+    not_if { ::File.exist?("#{node['windows_logrotate']['install_dir']}\\logrotate.exe") }
     installer_type :custom
     options "/S /v\"/qn\" /v\"INSTALLDIR=#{node['windows_logrotate']['install_dir']}\""
     source "#{Chef::Config[:file_cache_path]}\\logrotateSetup.exe"
