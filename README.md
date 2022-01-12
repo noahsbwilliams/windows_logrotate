@@ -15,6 +15,13 @@ Linux platforms.
 Supported logrotate configuration options: 
 https://sourceforge.net/p/logrotatewin/wiki/LogRotate/#configuration-file
 
+## Testing Locally
+
+	chef install .\Policyfile.rb    
+    chef export .\Policyfile.rb ./chef-output --force	
+    cd ./chef-output
+    chef-client -z
+
 ## Requirements
 
 - Chef 12.6+

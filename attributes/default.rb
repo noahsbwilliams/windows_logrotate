@@ -3,4 +3,4 @@ default['windows_logrotate']['sha256'] = '186bf4470b97a649997457992c2f80192a9235
 default['windows_logrotate']['install_dir'] = "#{ENV['SYSTEMDRIVE']}\\logrotate"
 default['windows_logrotate']['zip_filename'] = "logrotateSetup_#{node['windows_logrotate']['version']}.zip"
 default['windows_logrotate']['url'] = 'https://phoenixnap.dl.sourceforge.net/project' \
-    "/logrotatewin/#{node['windows_logrotate']['zip_filename']}" \
+    "/logrotatewin/#{node['windows_logrotate']['zip_filename']}"
