@@ -35,7 +35,7 @@
   "recipes": {
 
   },
-  "version": "0.1.0",
+  "version": "1.0.2",
   "source_url": "https://github.com/dhoer/chef-windows_logrotate",
   "issues_url": "https://github.com/dhoer/chef-windows_logrotate/issues",
   "privacy": false,

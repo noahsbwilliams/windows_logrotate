@@ -1,0 +1,51 @@
+{
+  "revision_id": "4b0fcbdc45d5df5d0c85a0f5045ba62343e32514aa2438a580ae9f09451a6b09",
+  "name": "windows_logrotate",
+  "run_list": [
+    "recipe[windows_logrotate::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "windows_logrotate": {
+      "version": "1.0.2",
+      "identifier": "572c1f76af28378192299d6a92b403a04e208f9c",
+      "dotted_decimal_identifier": "24536836620625975.36470979427996340.3987040407452",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/noahsbwilliams/windows_logrotate",
+        "revision": "31a194c96d49c240fe05e9e3a0516ad7e6a51050",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/hotfix/fix-installation"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "windows_logrotate",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "windows_logrotate (1.0.2)": [
+
+      ]
+    }
+  }
+}
