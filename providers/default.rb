@@ -5,11 +5,6 @@ def whyrun_supported?
 end
 
 action :enable do
-  unless run_context.loaded_recipe? 'windows_logrotate::default'
-    recipe_eval do
-      run_context.include_recipe 'windows_logrotate::default'
-    end
-  end
 
   content_dir = "#{node['windows_logrotate']['install_dir']}\\Content"
   conf_path = "#{content_dir}\\#{new_resource.name}.conf"
