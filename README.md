@@ -17,11 +17,13 @@ https://sourceforge.net/p/logrotatewin/wiki/LogRotate/#configuration-file
 
 ## Testing Locally
 
-	  chef install .\Policyfile.rb    
-    chef export .\Policyfile.rb ./chef-output --force	
-    cd ./chef-output
-    chef-client -z
+### Installing
 
+  ./install.ps1
+### Uninstalling
+
+  ./uninstall.ps1
+  
 ## Requirements
 
 - Chef 12.6+

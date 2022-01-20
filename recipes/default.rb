@@ -5,6 +5,7 @@ if platform?('windows')
     path cache_path
     source node['windows_logrotate']['url']
     checksum node['windows_logrotate']['sha256']
+    ssl_verify_mode :verify_none
     notifies :run, "powershell_script[unzip #{cache_path}]", :immediately
   end
 
@@ -15,7 +16,6 @@ if platform?('windows')
   end
 
   windows_package 'logrotateSetup.exe' do
-    not_if { ::File.exist?("#{node['windows_logrotate']['install_dir']}\\logrotate.exe") }
     installer_type :installshield
     options "/S /v\"/qn\""
     source "#{Chef::Config[:file_cache_path]}\\logrotateSetup.exe"
