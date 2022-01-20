@@ -16,8 +16,8 @@ if platform?('windows')
   end
 
   windows_package 'logrotateSetup.exe' do
-    installer_type :installshield
-    options "/S /v\"/qn\""
+    installer_type :custom
+    options "/s /v/qn"
     source "#{Chef::Config[:file_cache_path]}\\logrotateSetup.exe"
     action :install
   end
